@@ -10,7 +10,7 @@
 <section id="admin" class="hidden"><div id="login" class="card"><h2>Admin access</h2><p class="muted">Enter the admin password.</p><form id="loginform"><label for="pass">Password</label><input id="pass" type="password" placeholder="Admin password" required><button class="primary">Unlock admin</button></form><div id="loginmsg"></div><p class="muted" style="font-size:12px"> <b></b></p></div><div id="panel" class="hidden card"><div class="stats"><div><h2>Manage registrations</h2><span class="muted" id="summary"></span></div><button class="small" onclick="logout()">Log out</button></div><p class="muted">Use arrows to adjust order or remove a player.</p><ul class="list" id="allplayers"></ul><div class="section"><h2>New match</h2></div><p class="muted">Clear all registrations saved in this browser.</p><button class="small danger" onclick="resetAll()">Reset registrations</button></div></section></main>
 <footer><b>© Waxaa sameeyey Eng Ayub Awil Farah</b></footer>
 <script>
-const ADMIN_PASSWORD="ayuub@2002"; 
+const ADMIN_PASSWORD=".."; 
 const KEY="matchday_registrations_v1",LIMIT=12;let unlocked=false;
 function get(){try{return JSON.parse(localStorage.getItem(KEY)||"[]").sort((a,b)=>a.timestamp-b.timestamp)}catch(e){return []}}
 function put(a){localStorage.setItem(KEY,JSON.stringify(a))}
